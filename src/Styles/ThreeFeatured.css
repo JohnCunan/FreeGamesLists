@@ -1,0 +1,26 @@
+.games-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-right: 5%;
+}
+
+.game-card {
+    background-color: #2F3061;
+    border-radius: 10px;
+}
+
+.game-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-card h2 {
+    margin: 15px 0px 15px 15px;
+    font-size: 20px;
+}
+
+.all-section {
+    margin-bottom: 0px;
+}
