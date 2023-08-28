@@ -21,7 +21,7 @@ export default function App() {
       method: 'GET',
       url: url,
       headers: {
-        'X-RapidAPI-Key': '443e1f58a0msh868d544b31010f3p1dd3d2jsn7fab86d81b7e',
+        'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
         'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
       }
     };
