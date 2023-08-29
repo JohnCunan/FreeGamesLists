@@ -10,7 +10,10 @@ import GameComponent from './Components/GameComponent'
 import TuneIcon from '@mui/icons-material/Tune';
 
 export default function App() {
-  console.log(process.env.REACT_APP_API_KEY)
+  const secret = process.env.REACT_APP_API_KEY
+  console.log(secret)
+  console.log(typeof(secret))
+
   const [url, setUrl] = useState('https://free-to-play-games-database.p.rapidapi.com/api/games');
   const [gameData, setGameData] = useState([])
   const [platform, setPlatform] = useState("")
