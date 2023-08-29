@@ -32,7 +32,7 @@ jobs:
           path: ./dist
       
       - name: Test Print
-        run: echo ${{ env.TEST_ENV_VAR }}
+        run: echo "${{ env.TEST_ENV_VAR }}"
 
       - name: Set API Key as Environment Variable
         run: echo "REACT_APP_API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
