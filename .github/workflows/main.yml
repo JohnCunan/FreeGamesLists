@@ -32,10 +32,10 @@ jobs:
           path: ./dist
       
       - name: Test Print
-        run: echo "${{ env.TEST_ENV_VAR }}"
+        run: echo "Hello World"
 
       - name: Set API Key as Environment Variable
-        run: echo "REACT_APP_API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+        run: echo "REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> $GITHUB_ENV
 
   deploy:
     name: Deploy
@@ -52,7 +52,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         env: 
-          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
+          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
