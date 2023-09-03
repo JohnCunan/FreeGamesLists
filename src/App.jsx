@@ -10,7 +10,7 @@ import GameComponent from './Components/GameComponent'
 import TuneIcon from '@mui/icons-material/Tune';
 
 export default function App() {
-  const secret = process.env.REACT_APP_API_KEY
+  const secret = import.meta.env.VITE_SECRET
   console.log(secret)
   console.log(typeof(secret))
 
