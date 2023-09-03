@@ -10,6 +10,10 @@ import GameComponent from './Components/GameComponent'
 import TuneIcon from '@mui/icons-material/Tune';
 
 export default function App() {
+
+  console.log("The secret is: ")
+  console.log(import.meta.env.VITE_SECRET)
+
   const [url, setUrl] = useState('https://free-to-play-games-database.p.rapidapi.com/api/games');
   const [gameData, setGameData] = useState([])
   const [platform, setPlatform] = useState("")
