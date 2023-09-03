@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import ThreeFeatured from './ThreeFeatured'
 
 export default function Featured(props) {
+    console.log("The secret is: ")
     console.log(import.meta.env.VITE_SECRET)
     const [featuredGames, setFeaturedGames] = useState([])
 
