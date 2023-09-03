@@ -31,9 +31,6 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Set API Key as Environment Variable
-        run: echo "VITE_SECRET=${{ secrets.VITE_SECRET }}" >> $GITHUB_ENV
-
   deploy:
     name: Deploy
     needs: build
@@ -48,8 +45,6 @@ jobs:
           path: ./dist
 
       - name: Deploy to GitHub Pages
-        env: 
-          VITE_SECRET: ${{ secrets.VITE_SECRET }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

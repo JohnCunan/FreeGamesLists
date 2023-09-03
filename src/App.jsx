@@ -10,10 +10,6 @@ import GameComponent from './Components/GameComponent'
 import TuneIcon from '@mui/icons-material/Tune';
 
 export default function App() {
-  const secret = import.meta.env.VITE_SECRET
-  console.log(secret)
-  console.log(typeof(secret))
-
   const [url, setUrl] = useState('https://free-to-play-games-database.p.rapidapi.com/api/games');
   const [gameData, setGameData] = useState([])
   const [platform, setPlatform] = useState("")
@@ -24,7 +20,7 @@ export default function App() {
       method: 'GET',
       url: url,
       headers: {
-        'X-RapidAPI-Key': secret,
+        'X-RapidAPI-Key': "443e1f58a0msh868d544b31010f3p1dd3d2jsn7fab86d81b7e",
         'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
       }
     };
