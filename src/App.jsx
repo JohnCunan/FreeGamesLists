@@ -101,7 +101,7 @@ export default function App() {
       <div className='main-container'>
         
         <div className='hero-container'>
-          <h3 className='hero-text'>Browse Free-To-Play PC and Broswer Games</h3>
+          <h3 className='hero-text'>Test</h3>
         </div>
         
         <div className='filters-container'>
