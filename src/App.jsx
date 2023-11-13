@@ -11,9 +11,6 @@ import TuneIcon from '@mui/icons-material/Tune';
 
 export default function App() {
 
-  console.log("The secret is: ")
-  console.log(import.meta.env.VITE_SECRET)
-
   const [url, setUrl] = useState('https://free-to-play-games-database.p.rapidapi.com/api/games');
   const [gameData, setGameData] = useState([])
   const [platform, setPlatform] = useState("")
@@ -38,6 +35,7 @@ export default function App() {
 
   useEffect(() => {
     fetchData();
+    console.log("Effect Used")
   }, [url])
   
   function handlePlatChange(event){
@@ -60,14 +58,10 @@ export default function App() {
       console.log("Spec plat Spec genre")
       newUrl = `https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=${genre}&platform=${event.target.value}`
     }
-
-    // Browser + Fighting Error
-    console.log(newUrl)
     setUrl(newUrl)
   }
 
   function handleGenreChange(event){
-
     let newUrl = '';
     setGenre(event.target.value)
     if(event.target.value === "" && platform === ""){
@@ -87,11 +81,6 @@ export default function App() {
       newUrl = `https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=${event.target.value}&platform=${platform}`
     }
     setUrl(newUrl)
-    // setGenre(event.target.value)
-    // const genrevalue = 
-    //   event.target.value === "" ? null : event.target.value
-
-    // setUrl(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${event.target.value}`)
   }
 
   return (

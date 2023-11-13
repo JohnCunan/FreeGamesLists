@@ -6,7 +6,7 @@ import LoadingSkeleton from "./LoadingSkeleton";
 export default function ThreeFeatured({ game }){
 
     const [imageLoaded, setImageLoaded] = useState(false)
-
+    console.log("3 Feature rendered")
     const handleImageLoad = () => {
         console.log('handling image load...')
         setImageLoaded(true)
